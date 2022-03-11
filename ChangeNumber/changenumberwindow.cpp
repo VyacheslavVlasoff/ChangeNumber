@@ -25,6 +25,7 @@ ChangeNumberWindow::ChangeNumberWindow(QWidget *parent)
     btnOk->setText("Ok");
     btnOk->setFixedWidth(25);
     pb = new QProgressBar;
+    pb->setFormat("%v");
     pb->setRange(0, 9);
     pb->setValue(5);
     pb->setAlignment(Qt::AlignCenter);
@@ -53,6 +54,7 @@ ChangeNumberWindow::ChangeNumberWindow(QWidget *parent)
     connect(btnPlus, SIGNAL(clicked(bool)), this, SLOT(NumberPlus()));
     connect(btnMinus, SIGNAL(clicked(bool)), this, SLOT(NumberMinus()));
     connect(btnOk, SIGNAL(clicked(bool)), this, SLOT(Remove()));
+
 }
 
 void ChangeNumberWindow::Remove()
